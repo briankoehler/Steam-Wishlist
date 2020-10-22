@@ -40,10 +40,9 @@ for game, info in games.items():
     # Price list extraction
     price_list = sales_data['data'][info['plain']]['list']
 
-    # Examining price_cuts and comparing to PRICE_CUT |||| message = client.messages.create(to=PHONE_NUM, from_='+15593376358', body='Test message')
+    # Examining price_cuts and comparing to PRICE_CUT
     for listing in price_list:
         if listing['price_cut'] >= settings.PRICE_CUT:
-            # print(game + ' has a ' + str(listing['price_cut']) + '% price cut on ' + listing['shop']['name'])
             sales.append(game + ' has a ' + str(listing['price_cut']) + '% price cut on ' + listing['shop']['name'])
 
 # Sending all "good" sales
