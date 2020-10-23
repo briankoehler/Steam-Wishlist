@@ -2,11 +2,7 @@ import requests, json
 import re
 import settings
 from sms import send_sales
-from twilio.rest import Client
 
-
-# Twilio Client
-client = Client(settings.ACCOUNT_SID, settings.AUTH_TOKEN)
 
 
 # API Call
